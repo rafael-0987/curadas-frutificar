@@ -77,7 +77,7 @@ footer a {
 
 #menu li a {
     color: black;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.315);
     border-radius: 5px;
     padding: 3px;
 }
