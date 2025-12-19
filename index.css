@@ -42,6 +42,10 @@ h1 {
     font-size: 36pt;
 }
 
+label {
+    font-size: 20px;
+}
+
 input, select {
     margin-bottom: 30px;
 }
@@ -53,13 +57,18 @@ button {
     border-radius: 10px;
 }
 
+footer a {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
 #menu {
     background: rgb(149, 103, 255);
     width: 100px;
     color: black;
     border-radius: 20px 0px;
     padding-top: 5px;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
 }
 
 #menu li {
