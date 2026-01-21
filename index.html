@@ -33,9 +33,13 @@
         </select>
         <br>
          
-        <button type="submit">Confirmar</button>
+        <button onclick="addlista()" >Confirmar</button>
 
     </section>
+
+    <ul id="lista">
+
+    </ul>
 
     <hr>
 
@@ -53,5 +57,40 @@
         
     </footer>
     
+    <script>
+        function addlista() {
+            const nome = document.getElementById("name");
+            const nome1 = nome.value;
+
+            if  (nome1 === ""){
+                alert("Digite seu nome!");
+                return;
+            }
+
+            const lista = document.getElementById("lista");
+            const item = document.createElement("li");
+
+
+            item.textContent = nome1;
+            lista.appendChild(item);
+
+            nome.value = '';
+//----------------------------------------------------------------------------
+            const inputNome = document.getElementById("name");
+            const nome2 = inputNome.value.trim();
+
+            const mensagem = `Olá! Meu nome é ${nome2} e estou confirmando presença no evento Curadas Para Frutificar.`;
+
+            const numero = "5521991175770";
+
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
+
+            window.open(url, "_blank");
+
+
+        }
+    </script>
+
+
 </body>
 </html>
