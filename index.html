@@ -59,11 +59,28 @@
     
     <script>
         function addlista() {
+
+            const url_ = "https://docs.google.com/forms/d/e/1FAIpQLScjHH-2m7eEUbLtyrQfBii6sn8aBqTYUZ2UPy0ztwwtnO1aMA/formResponse";
+            const campoNomeForm = "entry.1494106017";
+
+            const dados_ = new FormData();
+            
+
             const nome = document.getElementById("name");
             const nome1 = nome.value;
 
             const opcao = document.getElementById("opcao").value;
             
+            dados_.append(campoNomeForm, nome1);
+
+
+            fetch(url_, {
+                method: "POST",
+                mode: "no-cors",
+                body: dados_
+            });
+
+
             if (opcao === "") {
                 alert("Selecione a opcao se irar comparecer ao evento");
                 return;
