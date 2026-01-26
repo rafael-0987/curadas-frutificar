@@ -74,11 +74,7 @@
             dados_.append(campoNomeForm, nome1);
 
 
-            fetch(url_, {
-                method: "POST",
-                mode: "no-cors",
-                body: dados_
-            });
+            
 
 
             if (opcao === "") {
@@ -97,6 +93,12 @@
 
             item.textContent = nome1;
             lista.appendChild(item);
+
+            fetch(url_, {
+                method: "POST",
+                mode: "no-cors",
+                body: dados_
+            });
 
 //----------------------------------------------------------------------------
 
